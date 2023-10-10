@@ -21,14 +21,14 @@ const inputData = () => {
     miestas: townAdd,
     kaina: priceAdd,
     plotas: areaAdd,
-    roomNumberAdd: roomNumberAdd,
+    kambariuSkaicius: roomNumberAdd,
   };
   return inputWrapper;
 };
 
 btn.addEventListener("click", async () => {
   const inputFlat = inputData();
-  console.log(inputFlat);
+
   try {
     const responce = await fetch(inputfetch, {
       method: "POST",

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <header>
+        <div><a class="logo" href="../index.html">FLATS</a></div>
+        <ul class="navBar">
+          <li>
+            <a class="navBarLink" href="./inputIndex.html">Imput flat</a>
+          </li>
+          <li>
+            <a class="navBarLink" href="./userindex.html">
+              <span id="user"></span>
+            </a>
+          </li>
+        </ul>
+      </header>
+    </div>
+    <main >
+        <div class="flatmain">
+        <div class="wrapperBox" id="wrapperBox">
+            <h2 class="town" id="town"></h2>
+            <h3 class="price" id="price"></h3>
+            <h3 class="area" id="area"></h>
+            <h3 class="roomNumber" id="roomNumber"></h>
+        </div>
+        <div class="flatinput">
+            <input type="text" name="upTown" id="upTown">
+            <input type="number" name="upPrice" id="upPrice">
+            <input type="number" name="upAarea" id="upArea">
+            <input type="number" name="upRroomNumber" id="upRroomNumber">
+            <button id="updateBtn" class="updateBtn">Update flat</button>
+            
+        </div>
+        </div>
+    </main>
+    <div class="delButton">
+        <button id="delBtn" class="delBtn">DELETE</button>
+    </div>
+    
+    <script type="module" src="../src/flat.js"></script>
+  </body>
+</html>
