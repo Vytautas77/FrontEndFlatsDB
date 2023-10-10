@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <header>
+        <div><a class="logo" href="../index.html">FLATS</a></div>
+        <ul class="navBar">
+          <li>
+            <a class="navBarLink" href="./indexInput.html">Imput flat</a>
+          </li>
+          <li>
+            <a class="navBarLink" href="./indexInput.html">
+              <span id="user"></span>
+            </a>
+          </li>
+        </ul>
+      </header>
+    </div>
+
+    <main class="inputBar">
+      <div class="inputs">
+        <input type="text" id="town" class="town" placeholder="miestas" />
+        <input type="number" id="price" class="price" placeholder="kaina" />
+        <input type="number" id="area" class="area" placeholder="plotas" />
+        <input
+          type="number"
+          id="roomNumber"
+          class="roomNumber"
+          placeholder="kambarių skaičius"
+        />
+        <button id="addFlat" class="addFlat">Įkelti butą</button>
+        <div id="infoMesenger" class="infoMesenger"></div>
+      </div>
+      <div></div>
+    </main>
+
+    <script src="../src/inputSript.js"></script>
+  </body>
+</html>
