@@ -1,15 +1,15 @@
 const btn = document.getElementById("addFlat");
 const usersWrapper = document.getElementById("user");
-const infoMesenger = document.getElementById("infoMesenger");
-const inputfetch = "http://localhost:3000/flats";
-const userfech = "http://localhost:3000/users";
+const infoMessenger = document.getElementById("infoMessenger");
+const inputFetch = "http://localhost:3000/flats";
+const userFetch = "http://localhost:3000/users";
 
-const getuser = async () => {
-  const response = await fetch(userfech);
+const getUser = async () => {
+  const response = await fetch(userFetch);
   const users = await response.json();
   usersWrapper.append(users.users[0].name);
 };
-getuser();
+getUser();
 
 const inputData = () => {
   const townAdd = document.getElementById("town").value;
@@ -28,9 +28,8 @@ const inputData = () => {
 
 btn.addEventListener("click", async () => {
   const inputFlat = inputData();
-
   try {
-    const responce = await fetch(inputfetch, {
+    const response = await fetch(inputFetch, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -38,14 +37,14 @@ btn.addEventListener("click", async () => {
       },
       body: JSON.stringify(inputFlat),
     });
-    const data = await responce.json();
+    const data = await response.json();
     if (data) {
-      infoMesenger.innerHTML = "Duomenys įkelti sėkmingai.";
+      infoMessenger.innerHTML = "Duomenys įkelti sėkmingai.";
       setTimeout(() => {
         window.location.replace("../index.html");
       }, 2000);
     }
   } catch (err) {
-    infoMesenger.innerHTML = "Duomenys įkelti NEsėkmingai.";
+    infoMessenger.innerHTML = "Duomenys įkelti NEsėkmingai.";
   }
 });

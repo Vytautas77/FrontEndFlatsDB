@@ -1,7 +1,7 @@
 const flatsWrapper = document.getElementById("flatsWrapper");
 const usersWrapper = document.getElementById("user");
-const fetchflats = "http://localhost:3000/flats";
-const userflats = "http://localhost:3000/users";
+const fetchFlats = "http://localhost:3000/flats";
+const userFlats = "http://localhost:3000/users";
 
 const flatCard = (flat) => {
   const wrapperLink = document.createElement("a");
@@ -24,15 +24,15 @@ const flatCard = (flat) => {
 
   return wrapperLink;
 };
-const getuser = async () => {
-  const response = await fetch(userflats);
+const getUser = async () => {
+  const response = await fetch(userFlats);
   const users = await response.json();
   usersWrapper.append(users.users[0].name);
 };
-getuser();
+getUser();
 
 const getFlats = async () => {
-  const response = await fetch(fetchflats);
+  const response = await fetch(fetchFlats);
   const flats = await response.json();
   flats.flats
     .sort((a, b) => {

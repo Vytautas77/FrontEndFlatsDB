@@ -98,7 +98,7 @@ button {
   gap: 1rem;
 }
 
-.flatmain {
+.flatMain {
   margin-top: 6rem;
   display: flex;
   gap: 2rem;
@@ -122,6 +122,13 @@ button {
 }
 .delBtn:hover {
   background-color: gray;
+}
+.AddUserBtn {
+  padding: 0.5rem 3rem;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  cursor: pointer;
+  background-color: red;
 }
 
 .flatinput {
