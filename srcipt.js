@@ -44,10 +44,3 @@ const getFlats = async () => {
     });
 };
 getFlats();
-
-// const getF = async () => {
-//   const response = await fetch(userflats);
-//   const users = await response.json();
-//   console.log(users.users[0].name);
-// };
-// getF();

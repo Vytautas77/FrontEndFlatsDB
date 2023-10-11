@@ -12,7 +12,6 @@ const getUser = async () => {
   const users = await response.json();
   usersWrapper.append(users.users[0].name);
   localStorage.setItem("userId", users.users[0]._id);
-  console.log(users.users[0]._id);
 };
 getUser();
 
@@ -105,9 +104,7 @@ const addToUserFlatId = async () => {
     const getUser = await response.json();
     const userFlatProducts = getUser.users[0].userFlatProducts;
 
-    console.log("userFlatProducts before push:", userFlatProducts);
     userFlatProducts.push(flatID);
-    console.log("userFlatProducts after push:", userFlatProducts);
 
     return userFlatProducts;
   } catch (error) {
@@ -139,8 +136,3 @@ addToUserBtn.addEventListener("click", async () => {
     alert("Duomenys pakeisti NEsėkmingai.");
   }
 });
-// const response = await fetch(userFetch);
-// const getUser = await response.json();
-// const user = getUser.users[0].userFlatProducts;
-// user.push(flatID);
-// console.log(user);
